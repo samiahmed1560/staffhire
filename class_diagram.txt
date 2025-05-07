@@ -1,0 +1,82 @@
++-------------------------------------------------------+
+|                     StaffHire                         |
++-------------------------------------------------------+
+| - vacancyNumber: int                                  |
+| - designation: String                                 |
+| - jobType: String                                     |
+| - staffName: String                                   |
+| - joiningDate: String                                 |
+| - qualification: String                               |
+| - appointedBy: String                                 |
+| - joined: boolean                                     |
++-------------------------------------------------------+
+| + StaffHire(vacNo:int, desig:String, type:String,     |
+|   name:String, joinDate:String, qual:String,          |
+|   appointed:String, joined:boolean)                   |
+| + getVacancyNumber(): int                             |
+| + getDesignation(): String                            |
+| + getJobType(): String                                |
+| + getStaffName(): String                              |
+| + getJoiningDate(): String                            |
+| + getQualification(): String                          |
+| + getAppointedBy(): String                            |
+| + hasJoined(): boolean                                |
+| + setVacancyNumber(int): void                         |
+| + setDesignation(String): void                        |
+| + setJobType(String): void                            |
+| + setStaffName(String): void                          |
+| + setJoiningDate(String): void                        |
+| + setQualification(String): void                      |
+| + setAppointedBy(String): void                        |
+| + setJoined(boolean): void                            |
+| + display(): void                                     |
++-------------------------------------------------------+
+       ^                              ^
+       |                              |
+       |                              |
++-------------------+      +-----------------------+
+| FullTimeStaffHire |      | PartTimeStaffHire     |
++-------------------+      +-----------------------+
+| - salary: double  |      | - workingHour: int    |
+| - weeklyHours: int|      | - wagesPerHour: double|
++-------------------+      | - shifts: String      |
+| + getSalary():    |      | - terminated: boolean |
+|    double         |      +-----------------------+
+| + getWeeklyHours():int   | + getWorkingHour():int|
+| + setSalary(double):void | + getWagesPerHour():  |
+| + setWeeklyHours(int):   |    double             |
+|    void                  | + getShifts(): String |
+| + display(): void        | + isTerminated():     |
++-------------------+      |    boolean            |
+                          | + setShifts(String):   |
+                          |    void                |
+                          | + terminateStaff():void|
+                          | + display(): void      |
+                          +-----------------------+
+                                   ^
+                                   |
+                          +-----------------------+
+                          |   RecruitmentSystem   |
+                          +-----------------------+
+                          | - staffList:          |
+                          |   ArrayList<StaffHire>|
+                          | - [GUI components]    |
+                          +-----------------------+
+                          | + actionPerformed():  |
+                          |    void              |
+                          | + addFullTimeStaff(): |
+                          |    void              |
+                          | + addPartTimeStaff(): |
+                          |    void              |
+                          | + setFullTimeSalary():|
+                          |    void              |
+                          | + setPartTimeShifts():|
+                          |    void              |
+                          | + terminatePartTime- |
+                          |    Staff(): void     |
+                          | + displayStaff():    |
+                          |    void              |
+                          | + clearFields(): void|
+                          | + commandLineTest(): |
+                          |    void              |
+                          +-----------------------+
